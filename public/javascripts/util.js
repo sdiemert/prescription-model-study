@@ -6,8 +6,6 @@ function getData(){
 
     $.get("/study/data", function(data, status){
 
-        console.log(data);
-
         showViz(null,data);
 
     });

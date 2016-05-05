@@ -32,8 +32,8 @@ function _makeCallOutBox(events, x, y){
 
     var g = $(makeGroup());
     
-    var RECT_W = 100;
-    var RECT_H = 50;
+    var RECT_W = 120;
+    var RECT_H = 30;
     var EVENT_V_DIST = RECT_H*1.2;
     var RECT_BACKBONE_SEP = 20; 
     
@@ -62,6 +62,13 @@ function _makeCallOutBox(events, x, y){
                 x-RECT_BACKBONE_SEP-RECT_W, tmpY-RECT_H,
                 RECT_W, RECT_H,
                 5, "#e5e5e5", "black", 1
+            )
+        );
+        
+        g.append(
+            makeText(null,
+                x-RECT_BACKBONE_SEP-RECT_W+(RECT_W/8), tmpY-RECT_H+(RECT_H/2+3),
+                events[i].getText(), 12
             )
         );
         
@@ -126,10 +133,10 @@ function getTimelineAsSVGGroup(T, vOffset){
    var g = $(makeGroup());
     g.append(_makeDayAxis(null, vOffset));
     
-    var clusters = T.clusterEvents(900); //15 min clusters
+    var clusters = T.clusterEvents(15 * 60); //15 min clusters
     
     for(var i = 0; i < clusters.length; i++){
-        g.append(_makeEventMark(20, vOffset, clusters[i]));
+        g.append(_makeEventMark(125, vOffset, clusters[i]));
     }
     
     return g;

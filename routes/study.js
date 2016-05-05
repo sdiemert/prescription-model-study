@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Factory = require('../lib/Factory.js');
+var Factory = require('../lib/shared/Factory.js');
 
 var obj = [
     {"datetime": "2016-01-01 8:00", type : 'medication', "dose": 5, "units" : "mg", "substance":"aspirin"},
@@ -23,7 +23,7 @@ var obj = [
     {"datetime": "2016-01-10 18:00", type : 'medication', "dose": 100, "units" : "mg", "substance":"aspirin"}
 ];
 
-var Timeline = require("../lib/Timeline.js");
+var Timeline = require("../lib/shared/Timeline.js");
 
 router.get('/', function(req, res, next) {
 

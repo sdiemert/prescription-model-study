@@ -57,20 +57,30 @@ function _makeCallOutBox(events, x, y){
             )
         );
         
-        g.append(
-            makeRoundedRect(null, 
-                x-RECT_BACKBONE_SEP-RECT_W, tmpY-RECT_H,
-                RECT_W, RECT_H,
-                5, "#e5e5e5", "black", 1
-            )
-        );
+        if(events[i].getText()) {
+            g.append(
+                makeRoundedRect(null, 
+                    x-RECT_BACKBONE_SEP-RECT_W, tmpY-RECT_H,
+                    RECT_W, RECT_H,
+                    5, "#e5e5e5", "black", 1
+                )
+            );
+            g.append(
+                makeText(null,
+                    x - RECT_BACKBONE_SEP - RECT_W + (RECT_W / 8), tmpY - RECT_H + (RECT_H / 2 + 3),
+                    events[i].getText(), 12
+                )
+            );
+        }else if(events[i].getImage()){
+             g.append(
+                makeImage(null,
+                    events[i].getImage(),
+                    x - RECT_BACKBONE_SEP - RECT_W + (RECT_W / 8), tmpY - RECT_H + (RECT_H / 2 + 3),
+                    25, 25
+                )
+            );
+        }
         
-        g.append(
-            makeText(null,
-                x-RECT_BACKBONE_SEP-RECT_W+(RECT_W/8), tmpY-RECT_H+(RECT_H/2+3),
-                events[i].getText(), 12
-            )
-        );
         
     }
     

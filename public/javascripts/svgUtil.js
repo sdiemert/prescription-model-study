@@ -103,6 +103,21 @@ function makeCircle(id, x, y, r, color) {
 
 }
 
+function makeImage(id, path, x, y, w, h){
+
+    var e = document.createElementNS(SVGNameSpace, "image ");
+
+    e.setAttribute("xlink:href", path);
+    e.setAttribute("x", x);
+    e.setAttribute("y", y);
+    e.setAttribute("width", w);
+    e.setAttribute("height", h);
+    e.setAttribute("id", id);
+    
+    return e; 
+
+}
+
 /**
  * 
  * @param id {string}

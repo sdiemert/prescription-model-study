@@ -6,7 +6,7 @@ var Factory = require('../lib/Factory.js');
 var obj = [
     {"datetime": "2016-01-01 8:00", type : 'medication', "dose": 5, "units" : "mg", "substance":"aspirin"},
     {"datetime": "2016-01-02 01:00",type : 'medication',  "dose": 500, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-02 12:00",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
+    {"datetime": "2016-01-02 12:00",type : 'food',  "substance":"pizza"},
     {"datetime": "2016-01-02 14:00", type : 'medication', "dose": 50, "units" : "mg", "substance":"aspirin"},
     {"datetime": "2016-01-02 17:00",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
     {"datetime": "2016-01-02 22:00",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},

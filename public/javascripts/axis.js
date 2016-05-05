@@ -21,7 +21,7 @@ function dataPreprocessor(data){
 function drawTimelines(canvas, data){
     var Ts = createTimelines(data, "day");
     for(var i = 0; i < Ts.length; i++){
-        $(canvas).append(getTimelineAsSVGGroup(Ts[i], 150*(i+1)));
+        $(canvas).append(getTimelineAsSVGGroup(Ts[i], 300*(i+1)));
     }
 }
 
@@ -41,7 +41,7 @@ function showViz(err, data) {
     
     console.log(data);
     
-    drawTimelines(canvas, data);
+    drawTimelines(canvas, data.slice(1,11));
 
 }
 

@@ -115,7 +115,7 @@ function makeCircle(id, x, y, r, color) {
  * @param stroke {number}
  * @returns {Element}
  */
-function makeRoundedRect(id, x, y, w, h, rounding, color, stroke) {
+function makeRoundedRect(id, x, y, w, h, rounding, fill, line, stroke) {
 
     // rect x,y refer to top left corner 
     
@@ -128,8 +128,8 @@ function makeRoundedRect(id, x, y, w, h, rounding, color, stroke) {
     e.setAttribute("height", h);
     e.setAttribute("id", id);
 
-    e.style.stroke      = color || "#000000";
-    e.style.fill        = color || "#ffffff";
+    e.style.stroke      = line || "#000000";
+    e.style.fill        = fill || "#ffffff";
     e.style.strokeWidth = stroke || 2;
     
     return e; 

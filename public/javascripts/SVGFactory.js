@@ -28,31 +28,73 @@ function _makeDayAxis(id, vStart){
     return g;
 }
 
+function _makeCallOutBox(events, x, y){
+
+    var g = $(makeGroup());
+    
+    var RECT_W = 100;
+    var RECT_H = 50;
+    var EVENT_V_DIST = RECT_H*1.2;
+    var RECT_BACKBONE_SEP = 20; 
+    
+    // backbone of line
+    g.append(
+        makeLine(null, x, y, x,
+            y-((events.length-1) * EVENT_V_DIST+50),
+            "black", 1)
+    );
+    
+    
+    for(var i = 0; i < events.length; i++){
+        
+        var tmpY = y-((i)*EVENT_V_DIST + 50);
+
+        g.append(
+            makeLine(null, 
+                x, tmpY, 
+                x - RECT_BACKBONE_SEP, tmpY-RECT_BACKBONE_SEP,
+                "black", 1
+            )
+        );
+        
+        g.append(
+            makeRoundedRect(null, 
+                x-RECT_BACKBONE_SEP-RECT_W, tmpY-RECT_H,
+                RECT_W, RECT_H,
+                5, "#e5e5e5", "black", 1
+            )
+        );
+        
+    }
+    
+    return g; 
+    
+}
+
 /**
  *
  * @param hOffset {number}
  * @param vOffset {number}
- * @param event {Event}
- * @param event.datetime {Date}
+ * @param events {Event[]} events to be marked at the same time on the axis. 
+ * @param events.datetime {Date}
  */
-function _makeEventMark(hOffset, vOffset, event) {
+function _makeEventMark(hOffset, vOffset, events) {
 
-    var x = _scaleDayToAxis(event.time, hOffset, 980);
+    var x = _scaleDayToAxis(events[0].time, hOffset, 980);
 
     var g = $(makeGroup());
 
     g.append(makeCircle(null, x, vOffset, 5, 'blue'));
-    g.append(makeLine(null, x, vOffset, x-10, vOffset-35, "black", 1));
-    g.append(makeRoundedRect(null, x-40, vOffset-50, 30, 15, 5));
+    
 
-    g.mouseenter(function(x){
+    g.mouseenter(function(){
         g.children("circle").attr("r", 8);
-        g.children("rect").attr("w", this.attr);
+        g.append(_makeCallOutBox(events, x, vOffset));
     });
 
-    g.mouseleave(function(x){
+    g.mouseleave(function(){
         g.children("circle").attr("r", 5);
-        g.children("circle").attr("r", 5);
+        g.children("g").remove();
     });
     
     return g; 
@@ -81,13 +123,13 @@ function _scaleDayToAxis(t, rangeMin, rangeMax){
  */
 function getTimelineAsSVGGroup(T, vOffset){
     
-    console.log(T);
-    
    var g = $(makeGroup());
     g.append(_makeDayAxis(null, vOffset));
     
-    for(var i = 0; i < T.events.length; i++){
-        g.append(_makeEventMark(20, vOffset, T.events[i]));
+    var clusters = T.clusterEvents(900); //15 min clusters
+    
+    for(var i = 0; i < clusters.length; i++){
+        g.append(_makeEventMark(20, vOffset, clusters[i]));
     }
     
     return g;

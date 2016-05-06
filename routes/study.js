@@ -4,7 +4,8 @@ var router = express.Router();
 var Factory = require('../lib/shared/Factory.js');
 
 var obj = [
-    {"datetime": "2016-01-01 8:00", type : 'medication', "dose": 5, "units" : "mg", "substance":"aspirin"},
+    {"datetime": "2016-01-02 8:00", type : 'awake'},
+    {"datetime": "2016-01-02 8:10", type : 'medication', "dose": 5, "units" : "mg", "substance":"aspirin"},
     {"datetime": "2016-01-02 01:00",type : 'medication',  "dose": 500, "units" : "mg", "substance":"aspirin"},
     {"datetime": "2016-01-02 12:00",type : 'food',  "substance":"pizza"},
     {"datetime": "2016-01-02 14:00", type : 'medication', "dose": 50, "units" : "mg", "substance":"aspirin"},
@@ -14,7 +15,7 @@ var obj = [
     {"datetime": "2016-01-02 22:14",type : 'food', "substance":"grapefruit"},
     {"datetime": "2016-01-02 22:15",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
     {"datetime": "2016-01-02 22:16",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-02 22:45",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
+    {"datetime": "2016-01-02 22:45",type : 'sleep'},
     {"datetime": "2016-01-03 12:00",type : 'medication',  "dose": 5000, "units" : "mg", "substance":"aspirin"},
     {"datetime": "2016-01-05 12:00",type : 'food', "substance":"aspirin"},
     {"datetime": "2016-01-06 12:00", type : 'medication', "dose": 2, "units" : "mg", "substance":"aspirin"},

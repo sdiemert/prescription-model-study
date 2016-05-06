@@ -52,17 +52,30 @@ describe("Timeline", function () {
 
         it("should return 6 clusters of 15 min", function (done) {
             var C = T.clusterEvents(60*15);
-            console.log(C);
-            assert.equal(C.length, 4);
-            /*
+            assert.equal(C.length, 5);
             assert.equal(C[0].length, 1);
             assert.equal(C[1].length, 4);
             assert.equal(C[2].length, 3);
             assert.equal(C[3].length, 1);
             assert.equal(C[4].length, 1);
-            */
             done();
-
+        });
+        
+        it("should be able to cluster a single item", function(){
+            
+            var T2 = new Timeline(); 
+            T2.addEvent(new Event(new Date("2016-01-01 8:00")));
+            var C = T2.clusterEvents(60*15);
+            assert.equal(C.length, 1);
+            assert.equal(C[0].length, 1);
+            
+        });
+        
+        it("should return empty for zero and negative input",function(){
+            var C = T.clusterEvents(-1);
+            assert.deepEqual(C, []);
+            C = T.clusterEvents(0);
+            assert.deepEqual(C, []);
         });
 
 

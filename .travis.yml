@@ -6,7 +6,7 @@ deploy:
   access_key_id: AKIAIMRLTZNWD7EAQJGA
   secret_access_key:
     secure: W7GLcLndgXWbf7MTWuKBPo9pJvtoW+TKNV4ogPZa3CKAtYfB+JVfe+3yctjZ5ZnsPaRDO96TKPlId2JbiQrxLCWpvyj9+8pEr+GZBL7r21IurIcMQScB41BDvqInKYlYamqefmS9iE1sKpwtCbRiFo5bApHk89egrFukT/JuYbUmyWOoj/SCt6HaHaAiVqH9Saw2OZeTZZok/5DlsnjAM7DPE2UWucRFIIDL/R9uO+4wHON5h6QOrrgRG9lW4nAcCFOJUwAFt1iheXmUk1YMsNRkFIhQ4Up+xCw9Yg0OZmsKQE7r929+040V9LZZL3f6G+a8h9qycu5LMcHm4zVKQaQydwKcO1dOIzJBgr13W0LuLvAUzclJvmnVx+EzAJlm6vjZy3bdVNX5tjrILMfeH96A1/H78cz9VixIRZ3V/j5qtB9c0hKmqC+GzXkJXLjqNKOWhYwIcZH3SV6xxFzTmGmxjqWra5R82WnxL6FnwR18TPe9e28WFxQiHlJL/9LM2OykKDhv/wn0/50i5QNXTf3fsxZZ9Xx9VO9/PEgKn4CGjDEYSMsrdmUxhMgRGPIbuy0JVh+nbtIpuQurajQKFhCNX3oB5fiVtjkUf3qSLtQLasGtLPLyKtbHwuYSwVfvKTR3WRZhSxauCyNe2uViAqwmeP2AHlN/HMc016RVBQY=
-  bucket: ''
+  bucket: 'S3'
   revision_type: 'github'
   key: ''
   bundle_type: ''

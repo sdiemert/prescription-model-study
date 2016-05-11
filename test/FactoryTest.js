@@ -109,6 +109,11 @@ describe("Factory", function () {
             for (var e in Ts) {
                 assert.equal(Ts[e] instanceof Timeline, true);
             }
+            assert.equal(Ts[0].events.length, 3);
+            assert.equal(Ts[1].events.length, 2);
+            assert.equal(Ts[2].events.length, 5);
+            assert.equal(Ts[3].events.length, 1);
+            assert.equal(Ts[4].events.length, 2);
         });
 
     });

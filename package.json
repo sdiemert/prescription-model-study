@@ -7,6 +7,7 @@
     "test": "mocha test/*.js --recursive"
   },
   "dependencies": {
+    "async": "^2.0.0-rc.4",
     "body-parser": "~1.13.2",
     "browserify": "^13.0.0",
     "cookie-parser": "~1.3.5",

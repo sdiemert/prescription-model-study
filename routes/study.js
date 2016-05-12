@@ -41,20 +41,33 @@ router.post("/response", function(req, res){
         res.status(400).send("Bad Request"); 
     }else{
 
+        var seq = parseInt(req.query.sequence);
+
+        var adherent = (req.query.adherent === 'true');
+        
         console.log("RESPONSE " + JSON.stringify(req.query));
         
         // get user from cookie
         
         // send result to db.
 
-        // send next sequence
-        sendSequence(req.query.sequence+1, res);
+        d.recordResponse(seq, adherent, null, function(){
+            
+            // send next sequence
+            sendSequence(seq+1, res);
+
+        });
+
+
     }
     
 });
 
 
 function sendSequence(seq, res){
+    
+    console.log("looking up sequence: "+ seq)
+    
     d.getSequence(seq, function(result){
 
         if(result.length === 0){

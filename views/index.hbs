@@ -15,7 +15,13 @@
 
                     <div id="action-wrapper">
                         <p>Welcome to the prescribing semantics measurement tool.</p>
-                        <a href="/study"><button class="btn btn-success">Enter</button></a>
+
+                        <form>
+                            <input type="text" id="user"/>
+                            <input type="text" id="secret"/>
+                            <button class="btn btn-default" onclick="sendAuth();">Go</button>
+                        </form>
+
                     </div>
 
                 </div>
@@ -24,5 +30,25 @@
 
         </div>
 
+        <script type="text/javascript">
+            function sendAuth(){
+
+
+                var u = $("#user").val();
+                var s = $("#secret").val();
+
+                console.log("sendAuth("+u+","+s+")");
+
+                //$.post("/auth", {user : user, secret : secret}, function(){
+                $.post("/auth", {user : u, secret : s}, function(data, x, xhr){
+
+                    if(xhr.status === 200){
+                        window.location = data.redirect;
+                    }
+
+                });
+            }
+
+        </script>
     </body>
 </html>

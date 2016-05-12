@@ -16,12 +16,16 @@ d.connect(function(err){
 
 d.init("database/data.json"); 
 
+router.use(function(req, res, next){
+    if(!req.session || !req.session.auth){
+        res.redirect("/");
+    }else{
+        next(null); 
+    }
+});
 
 router.get('/', function(req, res, next) {
-
-    Factory.createEvent({type : 'foo'});
     res.render("study", {});
-
 });
 
 router.get('/data', function(req, res, next){
@@ -36,7 +40,6 @@ router.get('/data', function(req, res, next){
  *  Returns a response with the next data.
  */
 router.post("/response", function(req, res){
-
     if(!req.query || !req.query.adherent || !req.query.sequence){
         res.status(400).send("Bad Request"); 
     }else{
@@ -49,9 +52,11 @@ router.post("/response", function(req, res){
         
         // get user from cookie
         
+        var uid = req.session.userid; 
+        
         // send result to db.
 
-        d.recordResponse(seq, adherent, null, function(){
+        d.recordResponse(seq, adherent, uid, function(){
             
             // send next sequence
             sendSequence(seq+1, res);

@@ -5,9 +5,11 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var hbs          = require('hbs');
+var session      = require('express-session');
 
 var routes = require('./routes/index');
 var study  = require('./routes/study');
+var auth  = require('./routes/auth');
 
 var app = express();
 
@@ -25,11 +27,17 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+app.use(session({
+    secret: process.env.secret || 'somethingSecr3t',
+    resave : true,
+    saveUninitialized : true
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'lib')));
 
 app.use('/', routes);
 app.use('/study', study);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

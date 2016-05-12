@@ -3,21 +3,17 @@ var router = express.Router();
 
 var Factory = require('../lib/shared/Factory.js');
 
-var obj = [
-    {"datetime": "2016-01-02 8:00", type : 'awake'},
-    {"datetime": "2016-01-02 8:10", type : 'medication', "dose": 5, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-02 12:00",type : 'food',  "substance":"pizza"},
-    {"datetime": "2016-01-02 17:00",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-02 22:00",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-02 22:10",type : 'medication',  "dose": 50, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-02 22:45",type : 'sleep'},
-    {"datetime": "2016-01-03 12:00",type : 'medication',  "dose": 5000, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-05 12:00",type : 'food', "substance":"aspirin"},
-    {"datetime": "2016-01-06 12:00", type : 'medication', "dose": 2, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-08 12:00", type : 'medication', "dose": 100, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-09 12:00", type : 'medication', "dose": 100, "units" : "mg", "substance":"aspirin"},
-    {"datetime": "2016-01-10 18:00", type : 'medication', "dose": 100, "units" : "mg", "substance":"aspirin"}
-];
+var DBInterface = require("../lib/db/DB");
+var d = new DBInterface('database/study.db');
+
+d.connect(function(err){
+    if(err) {
+        console.log("DB ERROR: "+err);
+        process.exit(1);
+    }
+});
+
+d.init("database/data.json"); 
 
 var Timeline = require("../lib/shared/Timeline.js");
 
@@ -30,8 +26,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/data', function(req, res, next){
 
-    res.json(obj);
+    res.json(d.data);
 
 });
+
+
 
 module.exports = router;

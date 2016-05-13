@@ -4,17 +4,7 @@ var router = express.Router();
 var Factory = require('../lib/shared/Factory.js');
 var Timeline = require("../lib/shared/Timeline.js");
 
-var DBInterface = require("../lib/db/DB");
-var d = new DBInterface('database/study.db');
-
-d.connect(function(err){
-    if(err) {
-        console.log("DB ERROR: "+err);
-        process.exit(1);
-    }
-});
-
-d.init("database/data.json"); 
+var d = require("../lib/db/DB");
 
 router.use(function(req, res, next){
     if(!req.session || !req.session.auth){
@@ -48,11 +38,12 @@ router.post("/response", function(req, res){
 
         var adherent = (req.query.adherent === 'true');
         
-        console.log("RESPONSE " + JSON.stringify(req.query));
+        var uid = req.session.userid; 
+        
+        console.log("RESPONSE " + "user : "+ uid + " : " +JSON.stringify(req.query));
         
         // get user from cookie
         
-        var uid = req.session.userid; 
         
         // send result to db.
 
@@ -73,7 +64,7 @@ function sendSequence(seq, res){
     
     console.log("looking up sequence: "+ seq)
     
-    d.getSequence(seq, function(result){
+    d.getSequence(seq, function(result, rx){
 
         if(result.length === 0){
 
@@ -84,7 +75,7 @@ function sendSequence(seq, res){
             for(var i = 0; i < result.length; i++){
                 toSend.push(result[i].toTransferObject());
             }
-            res.json({sequenceNo : seq, data : toSend});
+            res.json({sequenceNo : seq, data : toSend, rx : rx});
         }
 
 

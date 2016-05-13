@@ -22,6 +22,11 @@
                             <button class="btn btn-default" onclick="sendAuth();">Go</button>
                         </form>
 
+                        <div class="panel panel-danger" id="error-box" style="display:none;">
+                            <div class="panel-heading"><h3>Failed to authenticate</h3></div>
+                            <div class="panel-body"><p id="message"></p></div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -31,6 +36,14 @@
         </div>
 
         <script type="text/javascript">
+
+            function showLoginFail(m){
+
+                $("#error-box").show();
+
+                $("#message").text(m);
+            }
+
             function sendAuth(){
 
 
@@ -42,8 +55,12 @@
                 //$.post("/auth", {user : user, secret : secret}, function(){
                 $.post("/auth", {user : u, secret : s}, function(data, x, xhr){
 
+                    console.log(data, x, xhr);
+
                     if(xhr.status === 200){
                         window.location = data.redirect;
+                    }else if(xhr.status === 401){
+                        showLoginFail(data.message);
                     }
 
                 });

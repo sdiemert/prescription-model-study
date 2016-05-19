@@ -1,126 +1,162 @@
 {
   "sequences": [
     {
-      "rx": "take aspirin 1 po bid prn",
+      "rx": "take warfarin 5 mg once daily",
       "data": [
-        {
-          "datetime": "2016-01-02 8:00",
-          "type": "awake"
-        },
-        {
-          "datetime": "2016-01-02 8:10",
-          "type": "medication",
-          "dose": 5,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-02 12:00",
-          "type": "food",
-          "substance": "pizza"
-        },
-        {
-          "datetime": "2016-01-02 17:00",
-          "type": "medication",
-          "dose": 50,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-02 22:00",
-          "type": "medication",
-          "dose": 50,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-02 22:10",
-          "type": "medication",
-          "dose": 50,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-02 22:45",
-          "type": "sleep"
-        },
-        {
-          "datetime": "2016-01-03 12:00",
-          "type": "medication",
-          "dose": 5000,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-05 12:00",
-          "type": "food",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-06 12:00",
-          "type": "medication",
-          "dose": 2,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-08 12:00",
-          "type": "medication",
-          "dose": 100,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-09 12:00",
-          "type": "medication",
-          "dose": 100,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-10 18:00",
-          "type": "medication",
-          "dose": 100,
-          "units": "mg",
-          "substance": "aspirin"
-        }
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
       ]
     },
     {
-      "rx": "take aspirin 1 po bid prn",
+      "rx": "take warfarin 5 mg once daily",
       "data": [
-        {
-          "datetime": "2016-01-02 8:00",
-          "type": "awake"
-        },
-        {
-          "datetime": "2016-01-02 12:00",
-          "type": "food",
-          "substance": "pizza"
-        },
-        {
-          "datetime": "2016-01-02 22:00",
-          "type": "medication",
-          "dose": 50,
-          "units": "mg",
-          "substance": "aspirin"
-        },
-        {
-          "datetime": "2016-01-02 22:45",
-          "type": "sleep"
-        },
-        {
-          "datetime": "2016-01-06 12:00",
-          "type": "medication",
-          "dose": 2,
-          "units": "mg",
-          "substance": "aspirin"
-        }
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 12:30", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },
+    {
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 15:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 14:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 10:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 23:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 20:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 8:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 11:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 22:30", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 9:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 13:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 13:30", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 16:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 7:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },
+    {
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 18:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 21:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+      ]
+    },{
+      "rx": "take warfarin 5 mg once daily",
+      "data": [
+        {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-03 17:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
       ]
     }
   ],
   "users": [
-    "simon",
-    "india"
+    "hydrogen",
+    "helium",
+    "lithium",
+    "beryllium",
+    "boron",
+    "carbon",
+    "nitrogen",
+    "oxygen"
   ]
 }

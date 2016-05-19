@@ -6,7 +6,11 @@
         {"datetime": "2016-01-01 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
         {"datetime": "2016-01-02 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
         {"datetime": "2016-01-03 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
-        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
+        {"datetime": "2016-01-04 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-05 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-05 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-06 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"},
+        {"datetime": "2016-01-07 12:00", "type": "medication", "dose": 5, "units": "mg", "substance": "warfarin"}
       ]
     },
     {
